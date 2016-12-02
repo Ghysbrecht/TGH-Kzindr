@@ -42,5 +42,5 @@ $container['user'] = function ($c) {
 };
 
 $container['session'] = function($c){
-        return new \SlimSesssion\Helper;
+        return new \SlimSession\Helper;
 };

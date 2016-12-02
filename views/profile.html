@@ -1,20 +1,22 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+{% if current_user.getName %}
     <h1>Profile Page</h1>
+{% endif %}
     <div class="row">
         <div class="large-3 columns"></div>
         <div class="large-6 columns">
-            <h4 class="pr_sub_ttl">Name:</h4><br>
-            {{name}}
-            <h4 class="pr_sub_ttl">Username:</h4><br>
-            {{username}}
-            <h4 class="pr_sub_ttl">E-mail:</h4><br>
-            {{email}}
-            <h4 class="pr_sub_ttl">Created at:</h4><br>
-            {{created_at}}
-            <h4 class="pr_sub_ttl">Updated at:</h4><br>
-            {{updated_at}}
+            {% if current_user.getName %}
+                <h4 class="pr_sub_ttl">Name:</h4><br>
+                {{current_user.getName}}
+                <h4 class="pr_sub_ttl">Username:</h4><br>
+                {{current_user.getUserName}}
+                <h4 class="pr_sub_ttl">E-mail:</h4><br>
+                {{current_user.getEmail}}
+            {% else %}
+                <h2 class="text-center"> Please <a href="/log-in">log in</a> first! </h2>
+            {% endif %}
         </div>
         <div class="large-3 columns"></div>
     </div>

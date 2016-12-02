@@ -26,7 +26,9 @@ class User
         $this->username = $values['username'];
         $this->email = $values['email'];
         $this->password = $values['password'];
+        if(isset($values['passwordconfirmation'])){
         $this->passwordconfirmation = $values['passwordconfirmation'];
+        }
         return $this;
     }
 
@@ -69,8 +71,33 @@ class User
         $result = $statement->fetch();
         if(empty($result)) throw new \Exception("No user found!");
         if(!password_verify($password, $result['password'])) throw new \Exception("Incorrect password");
+        return $this->create($result);
+    }
 
-        return $result;
+    public function findUser($username)
+    {
+        $query = "SELECT * FROM users WHERE username = :username";
+        $statement = $this->db->prepare($query);
+        $statement->execute([
+            'username' => $username,
+        ]);
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $result = $statement->fetch();
+        return $this->create($result);
+    }
 
+    public function getUserName()
+    {
+        return $this->username;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
     }
 }

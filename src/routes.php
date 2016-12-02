@@ -44,8 +44,8 @@ $app->post('/log-in', function($request, $response){
 
     try{
         $userinfo = $user->find($data['username'], $data['password']);
-        //show homepage
-        return $this->view->render($response, 'profile.html', $userinfo);
+        $this->session->set('current_user', $user->getUserName());
+        return $response->withRedirect($this->router->pathFor('profile'));
     } catch(\Exception $e) {
         //show reg form again
         $this->logger->debug("Error when finding user:");
@@ -54,4 +54,12 @@ $app->post('/log-in', function($request, $response){
     }
 });
 
-//
+$app->get('/logout', function($request, $response, $args) {
+$this->session::destroy();
+return $response->withRedirect($this->router->pathFor('home'));
+})->setName('logout');
+
+$app->get('/profile', function($request, $response){
+    $this->logger->info("Showing '/log-in' page");
+    return $this->view->render($response, 'profile.html');
+})->setName('profile');

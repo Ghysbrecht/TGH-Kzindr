@@ -3537,4 +3537,7 @@ table.hover tbody tr:nth-of-type(even):hover {
   margin-top: 20px;
   margin-bottom: 5px; }
 
+#currentUser a {
+  display: inline; }
+
 /*# sourceMappingURL=app.css.map */
