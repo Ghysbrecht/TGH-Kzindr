@@ -1,0 +1,26 @@
+@import 'foundation';
+
+@include foundation-everything;
+
+.welcome{
+    @include callout($secondary-color);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sign-up-form{
+    .row.submit{
+        text-align: center;
+    }
+}
+
+.log-in-form{
+    .row.submit{
+        text-align: center;
+    }
+}
+
+.pr_sub_ttl{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}

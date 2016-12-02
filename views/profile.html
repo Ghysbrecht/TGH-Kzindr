@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Profile Page</h1>
+    <div class="row">
+        <div class="large-3 columns"></div>
+        <div class="large-6 columns">
+            <h4 class="pr_sub_ttl">Name:</h4><br>
+            {{name}}
+            <h4 class="pr_sub_ttl">Username:</h4><br>
+            {{username}}
+            <h4 class="pr_sub_ttl">E-mail:</h4><br>
+            {{email}}
+            <h4 class="pr_sub_ttl">Created at:</h4><br>
+            {{created_at}}
+            <h4 class="pr_sub_ttl">Updated at:</h4><br>
+            {{updated_at}}
+        </div>
+        <div class="large-3 columns"></div>
+    </div>
+{% endblock %}

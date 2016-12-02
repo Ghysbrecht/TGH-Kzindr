@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Sign Up</h1>
+    <form class="sign-up-form" action="{{ path_for('signup') }}" method="post">
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="text" name="username" placeholder="Username" value="{{ username }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="text" name="name" placeholder="Name" value="{{ name }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="text" name="email" placeholder="Email" value="{{ email }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="password" name="password" placeholder="Password" value="{{ password }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="password" name="passwordconfirmation" placeholder="Confirm password" value="{{ passwordconfirmation }}">
+            </div>
+        </div>
+        <div class="row submit">
+            <button type="submit" name="button" class="button">Sign me up!</button>
+        </div>
+    </form>
+{% endblock %}

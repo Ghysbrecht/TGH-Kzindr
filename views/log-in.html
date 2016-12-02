@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Log In</h1>
+    <form class="log-in-form" action="{{ path_for('login') }}" method="post">
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="text" name="username" placeholder="Username" value="{{ username }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+                <input type="password" name="password" placeholder="Password" value="{{ password }}">
+            </div>
+        </div>
+        <div class="row submit">
+            <button type="submit" name="button" class="button">Sign me in!</button>
+        </div>
+    </form>
+{% endblock %}
