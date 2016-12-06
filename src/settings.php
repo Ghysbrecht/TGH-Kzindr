@@ -17,10 +17,10 @@ return [
         ],
         //Databse settings
         'db' => [
-            'host' => 'localhost',
-            'user' => 'root',
-            'pass' => '',
-            'dbname' => 'yodem'
+            'host' => getenv("DB_HOST"),
+            'user' => getenv("DB_USER"),
+            'pass' => getenv("DB_PASS"),
+            'dbname' => getenv('DB_NAME')
         ],
     ],
 ];
