@@ -703,3 +703,10 @@
 [2016-12-06 08:56:47] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"6cc86e2"}
 [2016-12-06 08:56:47] slim-app.INFO: Showing '/log-in' page [] {"uid":"a5320ca"}
 [2016-12-06 08:56:48] slim-app.INFO: Showing '/' home page [] {"uid":"9253f2d"}
+[2016-12-06 09:14:38] slim-app.INFO: Showing '/log-in' page [] {"uid":"a658b73"}
+[2016-12-06 09:14:39] slim-app.INFO: Showing '/' home page [] {"uid":"690eb58"}
+[2016-12-06 09:15:03] slim-app.INFO: Showing '/' home page [] {"uid":"0c705e2"}
+[2016-12-06 09:15:07] slim-app.INFO: Showing '/' home page [] {"uid":"cfeccba"}
+[2016-12-06 09:15:08] slim-app.INFO: Showing '/' home page [] {"uid":"b89b250"}
+[2016-12-06 09:15:10] slim-app.INFO: Showing '/log-in' page [] {"uid":"519a490"}
+[2016-12-06 09:15:11] slim-app.INFO: Showing '/' home page [] {"uid":"eb8ee20"}
