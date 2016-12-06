@@ -644,3 +644,50 @@
 [2016-12-02 11:32:47] slim-app.INFO: Showing '/' home page [] {"uid":"8a3606f"}
 [2016-12-02 11:34:22] slim-app.INFO: Showing '/log-in' page [] {"uid":"5db37c5"}
 [2016-12-02 11:34:22] slim-app.INFO: Showing '/' home page [] {"uid":"fcc995e"}
+[2016-12-02 11:49:08] slim-app.INFO: Showing '/log-in' page [] {"uid":"b5b4895"}
+[2016-12-02 11:49:09] slim-app.INFO: Showing '/' home page [] {"uid":"d713699"}
+[2016-12-02 11:49:11] slim-app.INFO: Showing '/log-in' page [] {"uid":"aae7795"}
+[2016-12-02 11:49:12] slim-app.INFO: Showing '/' home page [] {"uid":"3245022"}
+[2016-12-02 11:49:23] slim-app.INFO: Showing '/log-in' page [] {"uid":"e3d37ee"}
+[2016-12-02 11:49:23] slim-app.INFO: Showing '/' home page [] {"uid":"f73a03c"}
+[2016-12-02 11:51:17] slim-app.INFO: Showing '/log-in' page [] {"uid":"262246b"}
+[2016-12-02 11:51:17] slim-app.INFO: Showing '/' home page [] {"uid":"9efdebf"}
+[2016-12-02 11:52:19] slim-app.INFO: Showing '/log-in' page [] {"uid":"8d37327"}
+[2016-12-02 11:52:20] slim-app.INFO: Showing '/' home page [] {"uid":"52677e2"}
+[2016-12-02 11:54:57] slim-app.INFO: Showing '/log-in' page [] {"uid":"cb5d5bf"}
+[2016-12-02 11:54:58] slim-app.INFO: Showing '/' home page [] {"uid":"390c9d1"}
+[2016-12-02 12:00:25] slim-app.INFO: Showing '/' home page [] {"uid":"990cb1e"}
+[2016-12-02 12:00:25] slim-app.INFO: Showing '/' home page [] {"uid":"e00b45c"}
+[2016-12-02 12:00:27] slim-app.INFO: Showing '/log-in' page [] {"uid":"443fb27"}
+[2016-12-02 12:00:28] slim-app.INFO: Showing '/' home page [] {"uid":"94c8af7"}
+[2016-12-02 12:00:40] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"0af8f1b"}
+[2016-12-02 12:00:40] slim-app.DEBUG: Error when finding user: [] {"uid":"0af8f1b"}
+[2016-12-02 12:00:40] slim-app.DEBUG: --> No user found! [] {"uid":"0af8f1b"}
+[2016-12-02 12:00:41] slim-app.INFO: Showing '/' home page [] {"uid":"a3fc06a"}
+[2016-12-02 12:00:43] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"048ff90"}
+[2016-12-02 12:00:43] slim-app.DEBUG: Error when finding user: [] {"uid":"048ff90"}
+[2016-12-02 12:00:43] slim-app.DEBUG: --> No user found! [] {"uid":"048ff90"}
+[2016-12-02 12:00:43] slim-app.INFO: Showing '/' home page [] {"uid":"3e45c1a"}
+[2016-12-02 12:03:27] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"493c79f"}
+[2016-12-02 12:03:27] slim-app.DEBUG: Error when finding user: [] {"uid":"493c79f"}
+[2016-12-02 12:03:27] slim-app.DEBUG: --> No user found! [] {"uid":"493c79f"}
+[2016-12-02 12:03:28] slim-app.INFO: Showing '/' home page [] {"uid":"c08aeba"}
+[2016-12-03 15:22:42] slim-app.INFO: Showing '/' home page [] {"uid":"20806e8"}
+[2016-12-03 15:22:44] slim-app.INFO: Showing '/' home page [] {"uid":"eae3ec7"}
+[2016-12-03 15:25:29] slim-app.INFO: Showing '/sign-up' page [] {"uid":"2d15fca"}
+[2016-12-03 15:25:29] slim-app.INFO: Showing '/' home page [] {"uid":"9e469d6"}
+[2016-12-03 15:25:56] slim-app.INFO: Showing '/' POST processing sign-up form [] {"uid":"e01f3de"}
+[2016-12-03 15:25:56] slim-app.INFO: Showing '/log-in' page [] {"uid":"fb3d56b"}
+[2016-12-03 15:25:58] slim-app.INFO: Showing '/' home page [] {"uid":"144e94b"}
+[2016-12-03 15:26:15] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"2885c7c"}
+[2016-12-03 15:26:15] slim-app.INFO: Showing '/log-in' page [] {"uid":"dcd1e0e"}
+[2016-12-03 15:26:16] slim-app.INFO: Showing '/' home page [] {"uid":"36ded72"}
+[2016-12-03 15:26:32] slim-app.INFO: Showing '/' home page [] {"uid":"e2ff582"}
+[2016-12-03 15:26:33] slim-app.INFO: Showing '/' home page [] {"uid":"1adc613"}
+[2016-12-03 15:28:49] slim-app.INFO: Showing '/sign-up' page [] {"uid":"4d0e201"}
+[2016-12-03 15:28:50] slim-app.INFO: Showing '/' home page [] {"uid":"21602c2"}
+[2016-12-03 15:28:55] slim-app.INFO: Showing '/log-in' page [] {"uid":"3d048bd"}
+[2016-12-03 15:28:56] slim-app.INFO: Showing '/' home page [] {"uid":"a1d4d65"}
+[2016-12-03 15:29:11] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"8cdc249"}
+[2016-12-03 15:29:12] slim-app.INFO: Showing '/log-in' page [] {"uid":"23a9971"}
+[2016-12-03 15:29:12] slim-app.INFO: Showing '/' home page [] {"uid":"cad5824"}

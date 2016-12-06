@@ -1,5 +1,6 @@
 @import 'foundation';
-
+$topbar-background: black;
+$topbar-submenu-background: black;
 @include foundation-everything;
 
 .welcome{
@@ -27,4 +28,10 @@
 
 #currentUser a{
     display: inline;
+}
+
+.top-bar{
+    .menu-img{
+        margin: 0px,0px,0px,0px;
+    }
 }

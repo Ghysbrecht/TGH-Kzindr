@@ -3374,7 +3374,7 @@ table.hover tbody tr:nth-of-type(even):hover {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: black; }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
@@ -3539,5 +3539,8 @@ table.hover tbody tr:nth-of-type(even):hover {
 
 #currentUser a {
   display: inline; }
+
+.top-bar .menu-img {
+  margin: 0px,0px,0px,0px; }
 
 /*# sourceMappingURL=app.css.map */
