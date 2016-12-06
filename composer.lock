@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82d4610bd8feb8d6f9fd737b550fb578",
-    "content-hash": "eefc5e553844553a11e98cda5ba003a5",
+    "hash": "a71cdbc5082d5079a977e7b4d0cf375c",
+    "content-hash": "d5857e9cdf8a374120374e90ed6ad299",
     "packages": [
         {
             "name": "bryanjhv/slim-session",
@@ -1883,7 +1883,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.0"
+        "php": "~7"
     },
     "platform-dev": []
 }
