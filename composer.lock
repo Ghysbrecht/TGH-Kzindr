@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "105ff999410ef871e67f34f74da46f43",
-    "content-hash": "2a24a4c0be7192aab9e9151d970cee9a",
+    "hash": "c9679a359a876d0b56935299678aae8b",
+    "content-hash": "3085e3116e1f2b3129c43c3b073667d7",
     "packages": [
         {
             "name": "bryanjhv/slim-session",
@@ -342,6 +342,63 @@
                 "psr-3"
             ],
             "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "rych/random",
+            "version": "v0.1.0",
+            "target-dir": "Rych/Random",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rchouinard/rych-random.git",
+                "reference": "c728202f2ba60cf158a711c751979006944c4ec5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rchouinard/rych-random/zipball/c728202f2ba60cf158a711c751979006944c4ec5",
+                "reference": "c728202f2ba60cf158a711c751979006944c4ec5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.4"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "0.4.*@dev",
+                "phpunit/phpunit": "3.7.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "suggest": {
+                "ext-mcrypt": "*",
+                "ext-openssl": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Rych\\Random": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Chouinard",
+                    "email": "rchouinard@gmail.com",
+                    "homepage": "http://ryanchouinard.com"
+                }
+            ],
+            "description": "Random data generator for PHP",
+            "homepage": "https://github.com/rchouinard/rych-random",
+            "keywords": [
+                "cryptography",
+                "random"
+            ],
+            "time": "2013-11-12 03:36:50"
         },
         {
             "name": "slim/php-view",

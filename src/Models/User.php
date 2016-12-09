@@ -2,6 +2,7 @@
 
 namespace Ghysbrecht\Checkmein\Models;
 
+
 class User
 {
     public $id;
@@ -11,9 +12,11 @@ class User
     public $created_at;
     public $updated_at;
 
+    private $access_key;
     private $password;
     private $passwordconfirmation;
     private $db;
+
 
     public function __construct(\PDO $db = null)
     {
@@ -27,7 +30,14 @@ class User
         $this->email = $values['email'];
         $this->password = $values['password'];
         if(isset($values['passwordconfirmation'])){
-        $this->passwordconfirmation = $values['passwordconfirmation'];
+            $this->passwordconfirmation = $values['passwordconfirmation'];
+        }
+        if(!isset($values['access_key'])){
+            $random = new \Rych\Random\Random();
+            $this->access_key = $random->getRandomString(16);
+        }
+        else{
+            $this->access_key = $values['access_key'];
         }
         return $this;
     }
@@ -36,13 +46,14 @@ class User
     {
         if($this->validate())
         {
-            $query = "INSERT INTO users (name, username, password, email) VALUES (:name, :username, :password, :email)";
+            $query = "INSERT INTO users (name, username, password, email, access_key) VALUES (:name, :username, :password, :email, :access_key)";
             $statement = $this->db->prepare($query);
             $statement->execute([
                 'name' => $this->name,
                 'username' => $this->username,
                 'email' => $this->email,
-                'password' => password_hash($this->password,PASSWORD_DEFAULT)
+                'password' => password_hash($this->password,PASSWORD_DEFAULT),
+                'access_key' => $this->access_key
             ]);
             $this->id = $this->db->lastInsertId();
         }
@@ -99,5 +110,10 @@ class User
     public function getEmail()
     {
         return $this->email;
+    }
+
+    public function getAccessKey()
+    {
+        return $this->access_key;
     }
 }

@@ -14,6 +14,11 @@
                 {{current_user.getUserName}}
                 <h4 class="pr_sub_ttl">E-mail:</h4><br>
                 {{current_user.getEmail}}
+                <h4 class="pr_sub_ttl">Acces-Key:</h4><br>
+                <div id="spoiler" style="display:none">
+                    {{current_user.getAccessKey}}
+                </div>
+                <button id="hidebutton" title="Click to show/hide content" type="button" onclick="$('#spoiler')[0].style.display=''; $('#hidebutton')[0].style.display='none';">Show key...</button>
             {% else %}
                 <h2 class="text-center"> Please <a href="/log-in">log in</a> first! </h2>
             {% endif %}
