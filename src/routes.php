@@ -63,3 +63,25 @@ $app->get('/profile', function($request, $response){
     $this->logger->info("Showing '/log-in' page");
     return $this->view->render($response, 'profile.html');
 })->setName('profile');
+
+//Checkins
+$app->post('/api/checkin', function($request, $response){
+    $this->logger->info("Showing '/' POST processing checkin");
+
+    $checkin = $this->checkin;
+    $user = $this->user;
+
+    $user_id = $user->getIdWithKey($request->getHeader('access-key')[0])['id'];
+    $checkin->create($request->getParsedBody(),$user_id);
+
+    try{
+        $checkin->save();
+        //show homepage
+        //return $response->withRedirect($this->router->pathFor('login'));
+    } catch(\Exception $e) {
+        //show reg form again
+        $this->logger->debug("Error when saving checkin:");
+        $this->logger->debug("--> " . $e->getMessage());
+        //return $this->view->render($response, 'sign-up.html', $request->getParsedBody());
+    }
+});
