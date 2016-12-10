@@ -1,0 +1,38 @@
+<h2> Checkins </h2>
+<div class="row">
+ <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns">
+
+   {% if checkins %}
+     {% for checkin in checkins %}
+
+     <div class="row checkinitem">
+       <div class="small-3 columns image">
+         <img src="https://placeholdit.imgix.net/~text?txtsize=9&txt=75%C3%9775&w=75&h=75"
+         alt="profile picture">
+       </div>
+       <div class="small-7 columns end">
+         <div class="name">
+           <strong>{{ checkin.user.getName }} <span class="success badge">3</span></strong>
+         </div>
+         <div class="row times">
+           <div class="small-12 large-6 columns">
+             Checkin-time: {{ checkin.getStartTime |date("H:i") }}
+           </div>
+           <div class="small-12 large-6 columns">
+             Until: {{ checkin.getEndTime |date("G:i") }}
+           </div>
+         </div>
+         <div class="row">
+           <div class="small-12 columns">
+             {{ checkin.getMessage }}
+           </div>
+         </div>
+       </div>
+     </div>
+
+     {% endfor %}
+   {% else %}
+     <p class="text-center">Nobody at the Hackerspace now. ¯\_(ツ)_/¯</p>
+   {% endif %}
+ </div>
+</div>

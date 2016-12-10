@@ -2,27 +2,56 @@
 
 {% block body %}
 {% if current_user.getName %}
-    <h1>Profile Page</h1>
+<h2>Profile Page</h2>
 {% endif %}
-    <div class="row">
-        <div class="large-3 columns"></div>
-        <div class="large-6 columns">
-            {% if current_user.getName %}
-                <h4 class="pr_sub_ttl">Name:</h4><br>
-                {{current_user.getName}}
-                <h4 class="pr_sub_ttl">Username:</h4><br>
-                {{current_user.getUserName}}
-                <h4 class="pr_sub_ttl">E-mail:</h4><br>
-                {{current_user.getEmail}}
-                <h4 class="pr_sub_ttl">Acces-Key:</h4><br>
-                <div id="spoiler" style="display:none">
-                    {{current_user.getAccessKey}}
-                </div>
-                <button id="hidebutton" title="Click to show/hide content" type="button" onclick="$('#spoiler')[0].style.display=''; $('#hidebutton')[0].style.display='none';">Show key...</button>
-            {% else %}
-                <h2 class="text-center"> Please <a href="/log-in">log in</a> first! </h2>
-            {% endif %}
-        </div>
-        <div class="large-3 columns"></div>
+<div class="row">
+    <div class="small-11 small-centered columns">
+        {% if current_user.getName %}
+        <table class="hover">
+            <thead>
+                <tr>
+                    <th width="200">Basic:</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="pr_sub_ttl">Name:</p></td>
+                    <td>{{current_user.getName}}</td>
+                </tr>
+                <tr>
+                    <td><p class="pr_sub_ttl">Username:</p></td>
+                    <td>{{current_user.getUserName}}</td>
+                </tr>
+                <tr>
+                    <td><p class="pr_sub_ttl">E-mail:</p></td>
+                    <td>{{current_user.getEmail}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="hover">
+            <thead>
+                <tr>
+                    <th width="200">API-Info:</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="pr_sub_ttl">Acces-Key:</p></td>
+                    <td>
+                        <div id="spoiler" style="display:none">
+                            {{current_user.getAccessKey}}
+                        </div>
+                        <button id="hidebutton" title="Click to show/hide content" type="button" onclick="$('#spoiler')[0].style.display=''; $('#hidebutton')[0].style.display='none';">Show key...</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% else %}
+        <h2 class="text-center"> Please <a href="/log-in">log in</a> first! </h2>
+        {% endif %}
     </div>
+</div>
 {% endblock %}

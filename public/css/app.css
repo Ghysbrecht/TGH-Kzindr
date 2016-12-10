@@ -3534,8 +3534,12 @@ table.hover tbody tr:nth-of-type(even):hover {
   text-align: center; }
 
 .pr_sub_ttl {
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+.sc_sub_ttl {
   margin-top: 20px;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 #currentUser a {
   display: inline; }
