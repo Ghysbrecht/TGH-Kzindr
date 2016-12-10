@@ -36,7 +36,6 @@ $container['db'] = function ($c) {
    return $pdo;
 };
 
-
  // User model
 $container['user'] = function ($c) {
     return new \Ghysbrecht\Checkmein\Models\User($c['db']);
@@ -44,4 +43,9 @@ $container['user'] = function ($c) {
 
 $container['session'] = function($c){
         return new \SlimSession\Helper;
+};
+
+//Checkin
+$container['checkin'] = function ($c) {
+    return new \Ghysbrecht\Checkmein\Models\Checkin($c['db']);
 };
