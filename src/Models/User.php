@@ -97,6 +97,19 @@ class User
         return $this->create($result);
     }
 
+    public function getIdWithKey($access_key)
+    {
+        $query = "SELECT id FROM users WHERE access_key = :access_key";
+        $statement = $this->db->prepare($query);
+        $statement->execute([
+            'access_key' => $access_key,
+        ]);
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $result = $statement->fetch();
+        if(empty($result)) throw new \Exception("No user found!");
+        return $result;
+    }
+
     public function getUserName()
     {
         return $this->username;
