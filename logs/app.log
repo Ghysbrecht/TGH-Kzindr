@@ -1099,3 +1099,22 @@
 [2016-12-10 19:46:32] slim-app.INFO: Showing '/' home page [] {"uid":"15f8732"}
 [2016-12-10 19:46:39] slim-app.INFO: Showing '/' home page [] {"uid":"ce7f081"}
 [2016-12-10 19:46:39] slim-app.INFO: Showing '/' home page [] {"uid":"2145683"}
+[2016-12-10 20:07:57] slim-app.INFO: Showing '/' home page [] {"uid":"f310cd6"}
+[2016-12-10 20:07:58] slim-app.INFO: Showing '/' home page [] {"uid":"5951dd2"}
+[2016-12-10 20:07:59] slim-app.INFO: Showing '/sign-up' page [] {"uid":"df9cf0f"}
+[2016-12-10 20:08:00] slim-app.INFO: Showing '/' home page [] {"uid":"aa70522"}
+[2016-12-10 20:08:32] slim-app.INFO: Showing '/log-in' page [] {"uid":"47f9eab"}
+[2016-12-10 20:08:32] slim-app.INFO: Showing '/' home page [] {"uid":"7634888"}
+[2016-12-10 20:08:36] slim-app.INFO: Showing '/' POST processing sign-in form [] {"uid":"e6d11d0"}
+[2016-12-10 20:08:36] slim-app.INFO: Showing '/log-in' page [] {"uid":"d148f11"}
+[2016-12-10 20:08:37] slim-app.INFO: Showing '/' home page [] {"uid":"8342654"}
+[2016-12-10 20:08:44] slim-app.INFO: Showing '/' home page [] {"uid":"a3d06b4"}
+[2016-12-10 20:08:45] slim-app.INFO: Showing '/' home page [] {"uid":"57295be"}
+[2016-12-10 20:18:50] slim-app.INFO: Showing '/log-in' page [] {"uid":"123cd92"}
+[2016-12-10 20:18:51] slim-app.INFO: Showing '/' home page [] {"uid":"8289f48"}
+[2016-12-10 20:18:54] slim-app.INFO: Showing '/' home page [] {"uid":"0a50411"}
+[2016-12-10 20:18:55] slim-app.INFO: Showing '/' home page [] {"uid":"171bd9d"}
+[2016-12-11 01:06:31] slim-app.INFO: Showing '/log-in' page [] {"uid":"0231745"}
+[2016-12-11 01:06:31] slim-app.INFO: Showing '/' home page [] {"uid":"cbeedb5"}
+[2016-12-11 01:06:33] slim-app.INFO: Showing '/' home page [] {"uid":"ad26917"}
+[2016-12-11 01:06:34] slim-app.INFO: Showing '/' home page [] {"uid":"12585c3"}

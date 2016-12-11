@@ -110,6 +110,19 @@ class User
         return $result;
     }
 
+    public function getIdWithUIDKey($uid_key)
+    {
+        $query = "SELECT users.id FROM users, uid_keys WHERE users.access_key = uid_keys.access_key AND uid_key = :uid_key";
+        $statement = $this->db->prepare($query);
+        $statement->execute([
+            'uid_key' => $uid_key,
+        ]);
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $result = $statement->fetch();
+        if(empty($result)) throw new \Exception("No user found!");
+        return $result;
+    }
+
     public function getUserName()
     {
         return $this->username;

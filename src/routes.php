@@ -71,7 +71,14 @@ $app->post('/api/checkin', function($request, $response){
     $checkin = $this->checkin;
     $user = $this->user;
 
-    $user_id = $user->getIdWithKey($request->getHeader('access-key')[0])['id'];
+    if(isset($request->getHeader('access-key')[0])){
+       $user_id = $user->getIdWithKey($request->getHeader('access-key')[0])['id'];
+    }
+    else(isset($request->getHeader('uid-key')[0])){
+        $user_id = $user->getIdWithUIDKey($request->getHeader('uid-key')[0])['id'];
+    }
+
+
     $checkin->create($request->getParsedBody(),$user_id);
 
     try{

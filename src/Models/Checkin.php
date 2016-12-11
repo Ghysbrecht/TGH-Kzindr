@@ -54,5 +54,16 @@ class Checkin
         $this->id = $this->db->lastInsertId();
     }
 
+    public function getStartTime(){
+        return $this->start_time;
+    }
+
+    public function getEndTime(){
+        return $this->end_time;
+    }
+    public function getMessage(){
+        return $this->message;
+    }
+
 
 }
