@@ -15,13 +15,5 @@ return [
             'path' => __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
-        //Databse settings
-        'db' => [
-            'host' => getenv("DB_HOST"),
-            'user' => getenv("DB_USER"),
-            'pass' => getenv("DB_PASS"),
-            'dbname' => getenv('DB_NAME'),
-            'driver' => getenv('DB_DRIVER')
-        ],
     ],
 ];
