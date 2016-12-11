@@ -71,23 +71,22 @@ $app->post('/api/checkin', function($request, $response){
     $checkin = $this->checkin;
     $user = $this->user;
 
+    //Get the user_id using an access-key
     if(isset($request->getHeader('access-key')[0])){
        $user_id = $user->getIdWithKey($request->getHeader('access-key')[0])['id'];
     }
+    //If there is no access-key, use the uid-key (Arduino RFID)
     else if(isset($request->getHeader('uid-key')[0])){
         $user_id = $user->getIdWithUIDKey($request->getHeader('uid-key')[0])['id'];
     }
+    else throw new \Exception("No idendity credentials!");
 
     $checkin->create($request->getParsedBody(),$user_id);
 
     try{
         $checkin->save();
-        //show homepage
-        //return $response->withRedirect($this->router->pathFor('login'));
     } catch(\Exception $e) {
-        //show reg form again
         $this->logger->debug("Error when saving checkin:");
         $this->logger->debug("--> " . $e->getMessage());
-        //return $this->view->render($response, 'sign-up.html', $request->getParsedBody());
     }
 });
