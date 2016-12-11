@@ -30,7 +30,7 @@ $container['view'] = function ($container) {
 $container['db'] = function ($c) {
 
    $db = parse_url(getenv("DATABASE_URL"));
-   $dsn = $db['scheme'] . ":host=" . $db['host'] . ";dbname=" . str_replace("/","",$db['path']);
+   $dsn = getenv("DB_DRIVER") . ":host=" . $db['host'] . ";dbname=" . str_replace("/","",$db['path']);
    $pdo = new PDO($dsn, $db['user'], $db['pass']);
    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

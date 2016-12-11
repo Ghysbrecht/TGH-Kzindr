@@ -1129,3 +1129,5 @@
 [2016-12-11 20:31:52] slim-app.INFO: Showing '/' home page [] {"uid":"4f1ec49"}
 [2016-12-11 20:31:54] slim-app.INFO: Showing '/log-in' page [] {"uid":"6318234"}
 [2016-12-11 20:31:55] slim-app.INFO: Showing '/' home page [] {"uid":"853b1a0"}
+[2016-12-11 20:40:11] slim-app.INFO: Showing '/log-in' page [] {"uid":"6b61a85"}
+[2016-12-11 20:40:12] slim-app.INFO: Showing '/' home page [] {"uid":"54eddac"}
