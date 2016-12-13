@@ -23,7 +23,7 @@ class Checkin
     public function create(Array $values, $user_id = null)
     {
         if(isset($values['add_time'])){
-            $this->defaut_time = $values['add_time'];
+            $this->default_time = $values['add_time'];
         }
         if(isset($values['start_time'])){
             $this->start_time = $values['start_time'];
