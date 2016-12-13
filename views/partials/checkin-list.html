@@ -1,41 +1,44 @@
-<h2> Checkins </h2>
+
 <div class="row">
- <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns">
+    <div class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 columns">
+        <h2> Checkins </h2>
+        {% if checkins %}
+        {% for checkin in checkins %}
 
-   {% if checkins %}
-     {% for checkin in checkins %}
+        <div class="row checkinitem">
+            <div class="small-2 columns image">
+                <img src="https://s24.postimg.org/4xxbeurpx/Kzind_Emblem_SMall.png"
+                alt="profile picture">
+            </div>
+            <div class="small-10 columns end">
+                <div class="row">
+                    <div class="small-8 columns">
+                        <span class="username_span">{{ checkin.user.getName }}</span> <span class="badge">88</span></strong>
+                    </div>
+                    <div class="small-4 columns date_div text_right">
+                        {{ checkin.getEndTime |date("l j F") }}
+                    </div>
+                </div>
 
-     <div class="row checkinitem">
-       <div class="small-3 columns image">
-         <img src="https://s24.postimg.org/4xxbeurpx/Kzind_Emblem_SMall.png"
-         alt="profile picture">
-       </div>
-       <div class="small-7 columns end">
-         <div class="name">
-           <strong>{{ checkin.user.getName }} <span class="success badge">3</span></strong>
-         </div>
-         <div class="row times">
-           <div class="small-6 columns">
-             Checkin-time: {{ checkin.getStartTime |date("H:i") }}
-           </div>
-           <div class="small-6 columns">
-             Until: {{ checkin.getEndTime |date("G:i") }}
-           </div>
-         </div>
-         <div class="row">
-           <div class="small-8 columns">
-             {{ checkin.getMessage }}
-           </div>
-           <div class="small-4 columns">
-             {{ checkin.getEndTime |date("l j F") }}
-           </div>
-         </div>
-       </div>
-     </div>
+                <div class="row">
+                    <div class="small-8 columns">
+                        From: <span class="time_span">{{ checkin.getStartTime |date("H:i") }}</span>
+                    </div>
+                    <div class="small-4 columns  text_right">
+                        Until: <span class="time_span">{{ checkin.getEndTime |date("G:i") }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{ checkin.getMessage }}
+                    </div>
+                </div>
+            </div>
+        </div>
 
-     {% endfor %}
-   {% else %}
-     <p class="text-center">Nobody at the Hackerspace now. ¯\_(ツ)_/¯</p>
-   {% endif %}
- </div>
+        {% endfor %}
+        {% else %}
+        <p class="text-center">Nobody at the Hackerspace now. ¯\_(ツ)_/¯</p>
+        {% endif %}
+    </div>
 </div>

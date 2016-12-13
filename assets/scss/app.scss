@@ -36,8 +36,38 @@ $topbar-submenu-background: black;
     display: inline;
 }
 
+.date_div{
+    font-size: 75%;
+}
+
 .top-bar{
     .menu-img{
         margin: 0px,0px,0px,0px;
     }
+}
+
+.time_span{
+    font-weight: bold;
+    font-size: 90%;
+}
+.username_span{
+    font-size: 120%;
+    font-weight: bold;
+}
+.checkinitem{
+    margin-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #e3e6e8;
+    padding-bottom: 10px;
+    border-bottom-width: 1px;
+}
+.image img{
+    display: block;
+    margin: 0 auto;;
+}
+.columns h2{
+    text-align: center;
+}
+.text_right{
+    text-align: right;
 }
