@@ -5,6 +5,59 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  margin-bottom: 0.3rem;
+  border-radius: 0;
+  background: #cacaca;
+  border: 0; }
+  progress::-webkit-progress-bar {
+    background: #cacaca;
+    border-radius: 0; }
+  progress::-webkit-progress-value {
+    background: #2199e8;
+    border-radius: 0; }
+  progress::-moz-progress-bar {
+    background: #2199e8;
+    border-radius: 0; }
+  progress.primary {
+    color: #2199e8; }
+    progress.primary::-webkit-progress-value {
+      background: #2199e8; }
+    progress.primary::-moz-progress-bar {
+      background: #2199e8; }
+  progress.secondary {
+    color: #777; }
+    progress.secondary::-webkit-progress-value {
+      background: #777; }
+    progress.secondary::-moz-progress-bar {
+      background: #777; }
+  progress.success {
+    color: #3adb76; }
+    progress.success::-webkit-progress-value {
+      background: #3adb76; }
+    progress.success::-moz-progress-bar {
+      background: #3adb76; }
+  progress.warning {
+    color: #ffae00; }
+    progress.warning::-webkit-progress-value {
+      background: #ffae00; }
+    progress.warning::-moz-progress-bar {
+      background: #ffae00; }
+  progress.alert {
+    color: #ec5840; }
+    progress.alert::-webkit-progress-value {
+      background: #ec5840; }
+    progress.alert::-moz-progress-bar {
+      background: #ec5840; }
+  progress::-ms-fill {
+    border-radius: 0;
+    border: 0; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
@@ -2823,8 +2876,8 @@ body {
 
 .progress {
   background-color: #cacaca;
-  height: 1rem;
-  margin-bottom: 1rem;
+  height: 0.3rem;
+  margin-bottom: 0.3rem;
   border-radius: 0; }
   .progress.primary .progress-meter {
     background-color: #2199e8; }
@@ -3137,7 +3190,7 @@ html.is-reveal-open body {
 
 table {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0px;
   border-radius: 0; }
   table thead,
   table tbody,
@@ -3562,15 +3615,20 @@ table.hover tbody tr:nth-of-type(even):hover {
   margin-bottom: 10px;
   border-bottom-style: solid;
   border-bottom-color: #e3e6e8;
-  padding-bottom: 10px;
-  border-bottom-width: 1px; }
+  border-bottom-width: 1px;
+  padding-bottom: 10px; }
 
 .image img {
   display: block;
   margin: 0 auto; }
 
 .columns h2 {
-  text-align: center; }
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-color: #e3e6e8;
+  border-bottom-width: 1px;
+  margin-top: 20px;
+  margin-bottom: 15px; }
 
 .text_right {
   text-align: right; }

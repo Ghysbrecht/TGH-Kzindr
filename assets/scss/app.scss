@@ -1,6 +1,10 @@
 @import 'foundation';
 $topbar-background: black;
 $topbar-submenu-background: black;
+$progress-height: 0.3rem;
+$progress-margin-bottom: 0.3rem;
+$global-margin: 0px;
+@include foundation-progress-element;
 @include foundation-everything;
 
 .welcome{
@@ -58,15 +62,21 @@ $topbar-submenu-background: black;
     margin-bottom: 10px;
     border-bottom-style: solid;
     border-bottom-color: #e3e6e8;
-    padding-bottom: 10px;
     border-bottom-width: 1px;
+    padding-bottom: 10px;
 }
 .image img{
     display: block;
     margin: 0 auto;;
+
 }
 .columns h2{
     text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: #e3e6e8;
+    border-bottom-width: 1px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 .text_right{
     text-align: right;

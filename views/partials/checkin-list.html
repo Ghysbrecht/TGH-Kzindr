@@ -30,6 +30,11 @@
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
+                        <progress max="{{ (checkin.getEndTime|date("U")) - (checkin.getStartTime|date("U")) }}" min="0" value="{{ ("now"|date("U")) - (checkin.getStartTime|date("U")) }}"></progress>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
                         {{ checkin.getMessage }}
                     </div>
                 </div>
