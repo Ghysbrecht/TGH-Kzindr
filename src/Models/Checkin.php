@@ -70,7 +70,7 @@ class Checkin
 
 
     public function getCurrent(){
-        $query = "SELECT * FROM check_in WHERE DATE(end_time) = CURDATE() ORDER BY id DESC LIMIT 20";
+        $query = "SELECT * FROM check_in WHERE DATE(end_time) = CURRENT_DATE() ORDER BY id DESC LIMIT 20";
         $statement = $this->db->prepare($query);
         $statement->execute();
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
