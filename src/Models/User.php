@@ -123,6 +123,19 @@ class User
         return $result;
     }
 
+    public function getUserWithId($id)
+    {
+        $query = "SELECT * FROM users WHERE id = :id";
+        $statement = $this->db->prepare($query);
+        $statement->execute([
+            'id' => $id,
+        ]);
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $result = $statement->fetch();
+        if(empty($result)) throw new \Exception("No user found!");
+        return $this->create($result);
+    }
+
     public function getUserName()
     {
         return $this->username;

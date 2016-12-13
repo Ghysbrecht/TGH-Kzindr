@@ -3,7 +3,9 @@
 
 $app->get('/', function ($request, $response, $args) {
     $this->logger->info("Showing '/' home page");
-    return $this->view->render($response, 'index.html');
+    $checkin = $this->checkin;
+    $values = $checkin->getCurrent();
+    return $this->view->render($response, 'index.html', ['checkins' => $values]);
 })->setName('home');
 
 
