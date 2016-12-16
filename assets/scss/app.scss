@@ -25,6 +25,12 @@ $global-margin: 0px;
     }
 }
 
+.edit-form{
+    .row.submit{
+        text-align: center;
+    }
+}
+
 .pr_sub_ttl{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -80,4 +86,8 @@ $global-margin: 0px;
 }
 .text_right{
     text-align: right;
+}
+
+.page-title{
+    margin-top: 15px;
 }

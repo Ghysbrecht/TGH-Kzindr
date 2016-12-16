@@ -1,21 +1,18 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h3 class="text-center page-title">Sign Up</h3>
-    <form class="sign-up-form" action="{{ path_for('signup') }}" method="post">
+
+    {% if current_user.getName %}
+    <h3 class="text-center page-title">Update Profile</h3>
+    <form class="edit-form" action="{{ path_for('edit') }}" method="post">
         <div class="row">
             <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
-                <input type="text" name="username" placeholder="Username" value="{{ username }}">
+                <input type="text" name="name" placeholder="Name" value="{{current_user.getName}}">
             </div>
         </div>
         <div class="row">
             <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
-                <input type="text" name="name" placeholder="Name" value="{{ name }}">
-            </div>
-        </div>
-        <div class="row">
-            <div class="small-12 medium-6 medium-offset-3 large-4 large-offset-4 columns">
-                <input type="email" name="email" placeholder="Email" value="{{ email }}">
+                <input type="email" name="email" placeholder="Email" value="{{current_user.getEmail}}">
             </div>
         </div>
         <div class="row">
@@ -29,7 +26,10 @@
             </div>
         </div>
         <div class="row submit">
-            <button type="submit" name="button" class="button">Sign me up!</button>
+            <button type="submit" name="button" class="button">Update!</button>
         </div>
     </form>
+    {% else %}
+        <h3 class="text-center page-title"> Please <a href="/log-in">log in</a> first! </h3>
+    {% endif %}
 {% endblock %}

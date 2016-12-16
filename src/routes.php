@@ -66,6 +66,11 @@ $app->get('/profile', function($request, $response){
     return $this->view->render($response, 'profile.html');
 })->setName('profile');
 
+$app->get('/edit', function($request, $response){
+    $this->logger->info("Showing '/edit' page");
+    return $this->view->render($response, 'edit.html');
+})->setName('edit');
+
 //Checkins
 $app->post('/api/checkin', function($request, $response){
     $this->logger->info("Showing '/' POST processing checkin");

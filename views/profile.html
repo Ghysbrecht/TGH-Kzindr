@@ -2,7 +2,7 @@
 
 {% block body %}
 {% if current_user.getName %}
-<h2>Profile Page</h2>
+<h3 class="text-center page-title">Profile Page</h3>
 {% endif %}
 <div class="row">
     <div class="small-11 small-centered columns">
@@ -50,7 +50,7 @@
             </tbody>
         </table>
         {% else %}
-        <h2 class="text-center"> Please <a href="/log-in">log in</a> first! </h2>
+        <h3 class="text-center page-title"> Please <a href="/log-in">log in</a> first! </h3>
         {% endif %}
     </div>
 </div>

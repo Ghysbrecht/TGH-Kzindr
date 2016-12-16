@@ -3586,6 +3586,9 @@ table.hover tbody tr:nth-of-type(even):hover {
 .log-in-form .row.submit {
   text-align: center; }
 
+.edit-form .row.submit {
+  text-align: center; }
+
 .pr_sub_ttl {
   margin-top: 0px;
   margin-bottom: 0px; }
@@ -3632,5 +3635,8 @@ table.hover tbody tr:nth-of-type(even):hover {
 
 .text_right {
   text-align: right; }
+
+.page-title {
+  margin-top: 15px; }
 
 /*# sourceMappingURL=app.css.map */
