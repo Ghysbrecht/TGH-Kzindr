@@ -25,11 +25,12 @@ class User
 
     public function create(Array $values)
     {
+        if(isset($values['id'])) $this->id = $values['id'];
         $this->name = $values['name'];
-        $this->username = $values['username'];
+        if(!isset($values['edit'])) $this->username = $values['username'];
         $this->email = $values['email'];
         $this->password = $values['password'];
-        if(isset($values['passwordconfirmation'])){
+        if(isset($values['signup']) || isset($values['edit'])){
             $this->passwordconfirmation = $values['passwordconfirmation'];
         }
         if(!isset($values['access_key'])){
@@ -62,11 +63,11 @@ class User
 
     public function validate()
     {
-        if(strlen($this->username) < 5 || strlen($this->username) > 60) throw new \Exception("Username length invalid");
+        if(isset($this->username)) if(strlen($this->username) < 5 || strlen($this->username) > 60) throw new \Exception("Username length invalid");
         if(strlen($this->name) < 3 || strlen($this->name) > 60) throw new \Exception("Name length invalid");
         if($this->password != $this->passwordconfirmation) throw new \Exception("Passwords do not match");
-        if(strlen($this->password) < 8 || strlen($this->password) > 255 ) throw new \Exception("Password length invalid");
-        if(strlen($this->email) < 8 || strlen($this->email) > 128 ) throw new \Exception("Email invalid");
+        if(strlen($this->password) < 5 || strlen($this->password) > 255 ) throw new \Exception("Password length invalid");
+        if(strlen($this->email) < 5 || strlen($this->email) > 128 ) throw new \Exception("Email invalid");
 
         return true;
     }
@@ -141,6 +142,11 @@ class User
         return $this->username;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function getName()
     {
         return $this->name;
@@ -154,5 +160,20 @@ class User
     public function getAccessKey()
     {
         return $this->access_key;
+    }
+
+    public function update($user_id)
+    {
+        if($this->validate()){
+            $query = "UPDATE users SET name=:name, email=:email, password=:password, updated_at=now() WHERE id=:id;";
+            $statement = $this->db->prepare($query);
+            $statement->execute([
+                'id' => $user_id,
+                'name' => $this->name,
+                'email' => $this->email,
+                'password' => password_hash($this->password,PASSWORD_DEFAULT)
+            ]);
+        }
+        else throw new Exception("New data is not correct!");
     }
 }

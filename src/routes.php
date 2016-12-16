@@ -46,7 +46,7 @@ $app->post('/log-in', function($request, $response){
 
     try{
         $userinfo = $user->find($data['username'], $data['password']);
-        $this->session->set('current_user', $user->getUserName());
+        $this->session->set('current_user', $userinfo->getUserName());
         return $response->withRedirect($this->router->pathFor('profile'));
     } catch(\Exception $e) {
         //show reg form again
@@ -95,5 +95,22 @@ $app->post('/api/checkin', function($request, $response){
     } catch(\Exception $e) {
         $this->logger->debug("Error when saving checkin:");
         $this->logger->debug("--> " . $e->getMessage());
+    }
+});
+
+$app->post('/edit', function($request, $response){
+    $this->logger->info("Showing '/' POST processing edit form");
+    $user = $this->user;
+    $user->create($request->getParsedBody());
+
+    try{
+        $user->update($this->current_user->getId());
+        //show homepage
+        return $response->withRedirect($this->router->pathFor('home'));
+    } catch(\Exception $e) {
+        //show form again
+        $this->logger->debug("Error when updating user:");
+        $this->logger->debug("--> " . $e->getMessage());
+        return $this->view->render($response, 'edit.html', $request->getParsedBody());
     }
 });
